@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 const startScreenImage = 'assets/images/quiz-logo.png';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz, {super.key});
 
-  void goToQuizz() {
-    // ...
-  }
+  final void Function() startQuiz;
 
   @override
   Widget build(context) {
@@ -37,12 +35,15 @@ class StartScreen extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           OutlinedButton.icon(
-            onPressed: goToQuizz,
+            onPressed: startQuiz, //Called an Function object
+            /*onPressed: () { no need to create an anonymous function if startQuiz type is Function
+              startQuiz();
+            },*/
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
             ),
             icon: const Icon(Icons.arrow_forward),
-            label: const Text('Go to Quizz'),
+            label: const Text('Go to Quiz'),
           ),
         ],
       ),
