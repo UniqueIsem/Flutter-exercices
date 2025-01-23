@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 const startScreenImage = '../assets/images/quiz-logo.png';
 
@@ -26,10 +27,10 @@ class StartScreen extends StatelessWidget {
             ),
           ),*/
           const SizedBox(height: 80),
-          const Text(
+          Text(
             'Learn Flutter the fun way!',
-            style: TextStyle(
-              color: Colors.white,
+            style: GoogleFonts.poppins(
+              color: const Color.fromARGB(255, 145, 209, 226),
               fontSize: 20,
             ),
           ),
