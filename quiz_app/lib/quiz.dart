@@ -35,6 +35,7 @@ class _QuizState extends State<Quiz> {
 
   void chooseAnswer(String answer) {
     selectedAnswers.add(answer);
+    
     if (selectedAnswers.length == questions.length) {
       setState(() {
         selectedAnswers = [];
