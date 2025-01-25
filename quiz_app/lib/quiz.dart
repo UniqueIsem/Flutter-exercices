@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/questions_screen.dart';
-import 'package:quiz_app/results-screen.dart';
+import 'package:quiz_app/results_screen.dart';
 import 'package:quiz_app/start_screen.dart';
 
 const startLeft = Alignment.topLeft;
@@ -35,10 +35,10 @@ class _QuizState extends State<Quiz> {
 
   void chooseAnswer(String answer) {
     selectedAnswers.add(answer);
-    
+
     if (selectedAnswers.length == questions.length) {
       setState(() {
-        selectedAnswers = [];
+        //selectedAnswers = [];
         activeScreen = 'results-screen';
       });
     }
