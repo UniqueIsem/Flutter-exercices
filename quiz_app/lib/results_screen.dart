@@ -13,7 +13,7 @@ class ResultsScreen extends StatelessWidget {
   final void Function() onRestart;
   final List<String> chosenAnwers;
 
-  List<Map<String, Object>> getSummaryData() {
+  List<Map<String, Object>> getSummaryData() { //we can use keyword 'get summaryData {}'
     final List<Map<String, Object>> summary = [];
 
     for (var i = 0; i < chosenAnwers.length; i++) {
@@ -32,9 +32,9 @@ class ResultsScreen extends StatelessWidget {
   Widget build(context) {
     final summaryData = getSummaryData();
     final numTotalQuestions = questions.length;
-    final numCorrectQuestions = summaryData.where((data) {
-      return data['user_answer'] == data['correct_answer'];
-    }).length;
+    final numCorrectQuestions = summaryData
+        .where((data) => data['user_answer'] == data['correct_answer']) 
+        .length; //we can use arrow functions instead of annonymous functions when there is just one declaration of return
 
     return SizedBox(
       //SizedBox is used as a Center Widget

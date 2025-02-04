@@ -34,8 +34,8 @@ class SummaryRow extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               Text(itemData['user_answer'] as String,
-                  style: const TextStyle(
-                    color: Color.fromARGB(197, 255, 255, 255),
+                  style: TextStyle(
+                    color: isCorrectAnswer ? const Color.fromARGB(197, 255, 255, 255) : const Color.fromARGB(255, 243, 52, 38), //const Color.fromARGB(255, 202, 13, 0),
                   )),
               Text(itemData['correct_answer'] as String,
                   style: const TextStyle(

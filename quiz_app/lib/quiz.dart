@@ -17,7 +17,7 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  List<String> selectedAnswers = [];
+  List<String> selectedAnswers = []; //we can use '_selectedAnswers' to make variable private if we make public the class
   var activeScreen = 'start-screen';
   //Widget? activeScreen; // '?' Tells Dart that the variable may contain a Widget OR null
 
