@@ -37,4 +37,22 @@ const questions = [
       'class PrivateClass = private;',
     ],
   ),
+  QuizQuestion(
+    'What type of value returns a boolean?',
+    [
+      'True and False',
+      'Integer Numbers',
+      'Double Numbers',
+      'Exeptions',
+    ],
+  ),
+  QuizQuestion(
+    'Wich of these options are not part of a collection',
+    [
+      'Tree',
+      'List',
+      'Map',
+      'Set',
+    ],
+  ),
 ];
